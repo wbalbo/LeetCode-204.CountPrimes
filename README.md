@@ -16,7 +16,7 @@ Runtime: 125 ms<br />
 Memory Usage: 23.5 MB<br />
 </b>
 
-
+![image](https://user-images.githubusercontent.com/570762/130325119-aaaedf16-de50-43ad-96ef-f1ac86c64752.png)
 
 I think I was good in this test, I followed some tips of this test in the LeetCode page but changed a bit my return to improve the performance.
 
