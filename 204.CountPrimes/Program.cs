@@ -22,25 +22,25 @@ namespace _204.CountPrimes
             if (number < 3)
                 return 0;
 
-            return NonPrimeNumbersCount(number);
+            return PrimeNumbersCount(number);
         }
 
-        static private int NonPrimeNumbersCount(int maxNumber)
+        static private int PrimeNumbersCount(int number)
         {
-            bool[] isPrime = new bool[maxNumber];
+            bool[] isPrime = new bool[number];
             //Set all items as true from 2 onwards
-            for (int i = 2; i < maxNumber; i++)
+            for (int i = 2; i < number; i++)
             {
                 isPrime[i] = true;
             }
 
-            for (int i = 2; i * i < maxNumber; i++)
+            //Used i * i to avoid use square (Math.sqrt), to improve perfomance
+            for (int i = 2; i * i < number; i++)
             {
                 if (!isPrime[i])
                     continue;
 
-                //Set all items that are divisible by i to false (avoiding using square to improve performance)
-                for (int j = i * i; j < maxNumber; j+= i)
+                for (int j = i * i; j < number; j+= i)
                 {
                     isPrime[j] = false;
                 }
